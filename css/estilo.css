@@ -1,0 +1,126 @@
+body{
+    background: rgb(155, 155, 212);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+h1::after{
+    content: '|';
+    animation: blink 1s linear infinite;
+}
+@keyframes blink{
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+    border: 5px solid white;
+}
+
+select{
+    width: 150px;
+    overflow: hidden;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-top: 200px;
+}
+
+ul{
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width:840px){
+    ul{
+      grid-template-columns: 1fr 1fr;  
+    }
+}
+@media (max-width:600px){
+    ul{
+      grid-template-columns: 1fr;  
+    }
+}
+
+ul a li{
+    border: 3px double rgba(8, 4, 4, 0.349);
+    height: 200px;
+    width: 200px;
+    margin: 20px 20px 0px 20px;
+    transition: all 0.2s ease-in;
+}
+    li#contcont{
+        background: url('../img/img_cont.png') no-repeat;
+        background-position: 50% 0%;
+        background-size: 450px 350px;
+    }
+
+    li#mult{
+        background: url('../img/img_mult.png') no-repeat;
+        background-position: 49% 0%;
+        background-size: 450px 350px;
+    }
+
+    li#age{
+        background: url('../img/age.png') no-repeat;
+        background-position: 49% 0%;
+        background-size: 450px 350px;
+    }
+    ul a:hover li#contcont{
+        background-position: 0px 0px;
+        background-size: 200px 200px;
+        transform: scale(1.5);
+    }
+    ul a:hover li#mult{
+        background-position: 0px 0px;
+        background-size: 200px 200px;
+        transform: scale(1.5);
+    }
+    ul a:hover li#age{
+        background-position: 0px 0px;
+        background-size: 200px 200px;
+        transform: scale(1.5);
+    }
+
+legend{
+    margin: 0px 0px 5px 0px;
+}
+
+.loader {
+    margin-top: 20px;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid rgb(21, 13, 90);
+    border-bottom: 10px solid rgb(21, 13, 90);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+    @keyframes spin {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }

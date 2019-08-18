@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Age Check</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Age Verication</h1>
+    </header>
+    <section>
+        <div>
+            <p>Year
+                <input type="number" name="year" id="year" min="1900">
+            </p>
+            <p>
+                Genre:
+                <input type="radio" name="sex" id="man" checked>
+                <label for="man">Male</label>
+                <input type="radio" name="sex" id="woman">
+                <label for="woman">Female</label>
+            </p>
+            <p>
+                <input id="check" type="button" value="Check">
+            </p>
+        </div>
+        <div id="res">
+               
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Leonardo R.D</p>
+    </footer>
+    <script src="./js/age.js"></script>
