@@ -34,7 +34,7 @@ function checking(){
                 image.setAttribute('src','./img/mulher.png');
         }
         res.style.textAlign = 'center';
-        res.innerHTML = `${genre} with ${age} years old.<br>`;
+        res.innerHTML = `${age} years old ${genre}.<br>`;
         res.appendChild(image);
     }
     formYear.focus();
