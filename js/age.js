@@ -3,8 +3,10 @@ function checking(){
     var year = data_year.getFullYear();
     var formYear = document.getElementById('year');
     var res = document.querySelector('body section div#res');
+    if(Number(formYear.value) < 1900)
+        window.alert('[Error] Invalid Year');
     if(formYear.value == '' || formYear.value > year)
-        alert('[ERROR] Verify the fields and try again...');
+        window.alert('[ERROR] Verify the fields and try again...');
     else{
         var sex = document.getElementsByName('sex');
         var age = year - Number(formYear.value);
