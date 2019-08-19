@@ -3,8 +3,6 @@ function checking(){
     var year = data_year.getFullYear();
     var formYear = document.getElementById('year');
     var res = document.querySelector('body section div#res');
-    if(Number(formYear.value) < 1900)
-        alert('[Error] Invalid Date');
     if(formYear.value == '' || formYear.value > year)
         alert('[ERROR] Verify the fields and try again...');
     else{
