@@ -3,9 +3,8 @@ function checking(){
     var year = data_year.getFullYear();
     var formYear = document.getElementById('year');
     var res = document.querySelector('body section div#res');
-    
-    if(formYear.value == '' || formYear.value > year || formYear < 1900)
-        alert('[ERROR] Verify the fields and try again...');
+    if(formYear.value == '' || formYear.value > year || Number(formYear.value) < 1900)
+        window.alert('[ERROR] Verify the fields and try again...');
     else{
         var sex = document.getElementsByName('sex');
         var age = year - Number(formYear.value);
@@ -35,7 +34,7 @@ function checking(){
                 image.setAttribute('src','./img/mulher.png');
         }
         res.style.textAlign = 'center';
-        res.innerHTML = `${genre} with ${age} years old.<br>`;
+        res.innerHTML = `${age} years old ${genre}.<br>`;
         res.appendChild(image);
     }
     formYear.focus();
