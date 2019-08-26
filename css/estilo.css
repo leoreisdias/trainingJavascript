@@ -1,31 +1,41 @@
-body{
+body {
     background: linear-gradient(135deg, #8844ee, #B07DFB);
     font: normal 15pt Arial;
 }
 
-header{
+header {
     color: white;
     text-align: center;
 }
 
-h1{
+h1 {
     text-align: center;
 }
-h1::after{
+
+h1#tic-tac-toe {
+    text-align: center;
+}
+
+h1#tic-tac-toe::after {
+    content: '';
+}
+
+h1::after {
     content: '|';
     animation: blink 1s linear infinite;
 }
-@keyframes blink{
-    0%,100%{
+
+@keyframes blink {
+    0%,
+    100% {
         opacity: 1;
     }
-    50%{
+    50% {
         opacity: 0;
     }
 }
 
-
-section{
+section {
     background: linear-gradient(135deg, #888787, rgb(46, 46, 48));
     border-radius: 10px;
     padding: 15px;
@@ -35,19 +45,19 @@ section{
     border: 5px solid rgba(82, 22, 22, 0.322);
 }
 
-select{
+select {
     width: 150px;
     overflow: hidden;
 }
 
-footer{
+footer {
     color: white;
     text-align: center;
     font-style: italic;
     margin-top: 200px;
 }
 
-ul{
+ul {
     padding: 50px;
     overflow: hidden;
     list-style: none;
@@ -55,58 +65,61 @@ ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-@media (max-width:840px){
-    ul{
-      grid-template-columns: 1fr 1fr;  
-    }
-}
-@media (max-width:600px){
-    ul{
-      grid-template-columns: 1fr;  
+
+@media (max-width:840px) {
+    ul {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-ul a li{
+@media (max-width:600px) {
+    ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+ul a li {
     border: 3px double rgba(8, 4, 4, 0.349);
     height: 200px;
     width: 200px;
     margin: 20px 20px 0px 20px;
     transition: all 0.2s ease-in;
 }
-    li#contcont{
-        background: url('../img/img_cont.png') no-repeat;
-        background-position: 50% 0%;
-        background-size: 450px 350px;
-    }
 
-    li#mult{
-        background: url('../img/img_mult.png') no-repeat;
-        background-position: 49% 0%;
-        background-size: 450px 350px;
-    }
+li#contcont {
+    background: url('../img/img_cont.png') no-repeat;
+    background-position: 50% 0%;
+    background-size: 450px 350px;
+}
 
-    li#age{
-        background: url('../img/age.png') no-repeat;
-        background-position: 49% 0%;
-        background-size: 450px 350px;
-    }
-    ul a:hover li#contcont{
-        background-position: 0px 0px;
-        background-size: 200px 200px;
-        transform: scale(1.5);
-    }
-    ul a:hover li#mult{
-        background-position: 0px 0px;
-        background-size: 200px 200px;
-        transform: scale(1.5);
-    }
-    ul a:hover li#age{
-        background-position: 0px 0px;
-        background-size: 200px 200px;
-        transform: scale(1.5);
-    }
+li#mult {
+    background: url('../img/img_mult.png') no-repeat;
+    background-position: 49% 0%;
+    background-size: 450px 350px;
+}
 
-legend{
+li#age {
+    background: url('../img/age.png') no-repeat;
+    background-position: 49% 0%;
+    background-size: 450px 350px;
+}
+
+li#tictactoe {
+    background: url('../img/tic_tac_toe.png') no-repeat;
+    background-position: 49% 0%;
+    background-size: 450px 350px;
+}
+
+ul a:hover li#contcont,
+ul a:hover li#mult,
+ul a:hover li#age,
+ul a:hover li#tictactoe {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+    transform: scale(1.5);
+}
+
+legend {
     margin: 0px 0px 5px 0px;
 }
 
@@ -120,7 +133,51 @@ legend{
     height: 20px;
     animation: spin 2s linear infinite;
 }
-    @keyframes spin {
-        from {transform: rotate(0deg);}
-        to {transform: rotate(360deg);}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
     }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* TIC-TAC-TOE */
+
+.botaoDeJogada {
+    width: 33%;
+    height: 100px;
+    font-size: 30pt;
+    font-family: 'Trebuchet MS';
+    background: rgb(63, 165, 134);
+    box-shadow: 2px 2px 2px black;
+}
+
+@media(max-width: 400px) {
+    .botaoDeJogada {
+        height: 80px;
+    }
+}
+
+.tic-tac-toe {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    flex-direction: column;
+}
+
+#status {
+    margin-top: 50px;
+    font-size: 22pt;
+    font-weight: bold;
+}
