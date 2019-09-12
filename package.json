@@ -1,0 +1,22 @@
+{
+  "name": "playing_with_javascript",
+  "version": "1.0.0",
+  "description": "I made these codes in order to practice JavaScript with a bit of CSS concepts too. Learning new things again... That's how the world evolves, isn't it? Many knowledge to be sought. haha",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morpheusblack/playing_with_javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morpheusblack/playing_with_javascript/issues"
+  },
+  "homepage": "https://github.com/morpheusblack/playing_with_javascript#readme",
+  "dependencies": {
+    "serve": "^11.1.0"
+  }
+}
