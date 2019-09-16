@@ -111,10 +111,17 @@ li#tictactoe {
     background-size: 450px 350px;
 }
 
+li#doomFire {
+    background: url('../img/fire.png') no-repeat;
+    background-position: 50% 0%;
+    background-size: 400px 250px;
+}
+
 ul a:hover li#contcont,
 ul a:hover li#mult,
 ul a:hover li#age,
-ul a:hover li#tictactoe {
+ul a:hover li#tictactoe,
+ul a:hover li#doomFire {
     background-position: 0px 0px;
     background-size: 200px 200px;
     transform: scale(1.5);
@@ -214,6 +221,28 @@ td.pixel {
 
 span.spanFire {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 10px;
+}
+
+audio {
+    position: absolute;
+    margin-top: 300px;
+    width: 10%;
+}
+
+button {
+    margin: 10px;
+    flex-grow: 0;
+}
+
+.fireUp {
+    background-color: rgb(196, 54, 54);
+    border-radius: 20%;
+}
+
+.fireDown {
+    background-color: rgb(93, 105, 172);
+    border-radius: 20%;
 }
